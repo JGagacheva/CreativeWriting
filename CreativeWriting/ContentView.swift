@@ -18,7 +18,7 @@ struct ContentView: View {
         NavigationStack(path: $navigationPath) {
             NoteListView(notes: notes, editing: $editing) { note in
                 withAnimation { navigationPath.append(note) }
-            } addNote: {
+            } addNode: {
                 let newNote = Note(title: "What are you thinking about?", body: "Tell me more.")
                 modelContext.insert(newNote)
                 withAnimation {
