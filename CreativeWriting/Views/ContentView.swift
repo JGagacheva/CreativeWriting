@@ -25,6 +25,10 @@ struct ContentView: View {
                 .tabItem {
                     Image(systemName: "pencil.and.scribble")
                 }
+            SettingsView()
+                .tabItem {
+                    Image(systemName: "gear")
+                }
         }
         .accentColor(Color.blue.opacity(0.7))
     }
