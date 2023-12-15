@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 struct ContentView: View {
-    @State private var notes: [Note] = SampleNote.contents
+    var notes: [Note] = SampleNote.contents
     @State private var editing = false
     var note: Note = SampleNote.contents[0]
     @Environment(\.modelContext) private var modelContext
@@ -17,7 +17,8 @@ struct ContentView: View {
     var body: some View {    
         TabView {
             NoteListView(notes: notes)
-                .tabItem { 
+//            NoteListView()
+                .tabItem {
                     Image(systemName: "checkmark.gobackward")
                 }
             NoteView(note: note)
